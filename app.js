@@ -81,3 +81,23 @@ console.log(parisTrip);
 console.log(parisTrip.name);
 console.log(parisTrip.toString());
 console.log(defaultTrip.toString());
+
+// Héritage
+
+class FreeTrip extends Trip{
+
+    constructor(id, name, imageUrl, price ) {
+        super(id,name,imageUrl);
+        this.price =0;
+    }
+
+    // redéfinition de méthode toString()
+    toStringConcat() {
+        return "Free" + super.toString();
+    }
+
+}
+
+const freeTrip = new FreeTrip("nantes", "Nantes", "img/nantes.jpg");
+
+console.log(freeTrip.toStringConcat());
