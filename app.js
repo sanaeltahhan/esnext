@@ -45,3 +45,39 @@ const [parisId, nycId, ...othersCitiesId] = citiesId;
 console.log(parisId);
 console.log(nycId);
 console.log(othersCitiesId.length);
+
+// Classe
+
+class Trip {
+    constructor(id, name, imageUrl, ) {
+        this.id = id;
+        this.name = name;
+        this.imageUrl = imageUrl;
+    }
+
+    toString () {
+        return "Trip [" + this.id + "," + this.name + ","  + this.imageUrl + "," + this._price + "]";
+    }
+
+    get price() {
+        return this._price;
+    }
+
+    set price(newPrice) {
+        this._price = newPrice;
+    }
+
+    static getDefaultTrip() {
+        return new Trip ("rio-de-janeiro", "Rio de Janeiro", "img/rio-de-janeiro.jpg");
+    }
+}
+
+let parisTrip = new Trip('paris', 'Paris', 'img/paris.jpg');
+parisTrip._price = 100;
+
+const defaultTrip = Trip.getDefaultTrip();
+
+console.log(parisTrip);
+console.log(parisTrip.name);
+console.log(parisTrip.toString());
+console.log(defaultTrip.toString());
