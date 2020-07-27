@@ -13,3 +13,21 @@ console.log(citiesId);
  //citiesId = ["paris", "nyc", "rome", "rio-de-janeiro","tokyo"];
 
 console.log(citiesId);
+
+// Creation objet
+
+function getWeather(cityId) {
+
+    let city = cityId.toUpperCase();
+    const temperature = 20;
+
+    return {
+        city : city ,
+        temperature : temperature
+    };
+
+}
+
+const weather = getWeather(favoriteCityId);
+
+console.log(weather);
