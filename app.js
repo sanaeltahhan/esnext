@@ -7,7 +7,7 @@ console.log(favoriteCityId);
 
 // CONST
 const citiesId = ["paris", "nyc", "rome", "rio-de-janeiro", "tokyo"];
-console.log(citiesId);
+//console.log(citiesId.length);
 
 //citiesId = [];
  //citiesId = ["paris", "nyc", "rome", "rio-de-janeiro","tokyo"];
@@ -38,3 +38,10 @@ const {city, temperature} = weather;
 
 console.log(city);
 console.log(temperature);
+
+// Rest operator
+
+const [parisId, nycId, ...othersCitiesId] = citiesId;
+console.log(parisId);
+console.log(nycId);
+console.log(othersCitiesId.length);
